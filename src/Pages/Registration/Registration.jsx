@@ -1,19 +1,23 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { updateProfile } from "firebase/auth";
+import auth from "../../firebase/firebase-config";
 
 
 
 const Registration = () => {
 
     const { createUser } = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const handleCreateUser = e => {
         e.preventDefault()
         const form = e.target;
         const name = form.name.value
+        const photo = form.photo.value
         const email = form.email.value
         const password = form.password.value
 
@@ -23,11 +27,22 @@ const Registration = () => {
         createUser(email, password)
             .then(res => {
                 console.log(res.user)
+                updateProfile(auth.currentUser, {
+                    displayName: name, photoURL: photo
+                })
+                    .then(() => {
+                        console.log('profile updated')
+                    })
+                    .catch(error => {
+                        console.log(error)
+                    })
+
                 Swal.fire(
                     'Good job!',
                     'Successful create account',
                     'success'
                 )
+                navigate('/')
             })
             .catch(error => {
                 Swal.fire({
@@ -44,12 +59,12 @@ const Registration = () => {
     const [see, setSee] = useState(false)
 
     return (
-        <div className="hero py-10 bg-[url(https://i.ibb.co/Kybz9h0/Stock-Snap-TEJEVWYFCK.jpg)] bg-cover bg-no-repeat h-[600px]">
-            <div className="w-[40%]">
+        <div className="hero py-10  bg-[url(https://i.ibb.co/Kybz9h0/Stock-Snap-TEJEVWYFCK.jpg)] bg-cover bg-no-repeat ">
+            <div className="w-[40%] ">
                 <div className="text-center">
                     <h1 className="text-5xl font-bold text-white mb-5">Create Account</h1>
                 </div>
-                <div className="card   flex-shrink-0 w-[80%] mx-auto shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 w-[80%] mx-auto shadow-2xl bg-base-100">
                     <form onSubmit={handleCreateUser} className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -57,6 +72,15 @@ const Registration = () => {
                             </label>
 
                             <input name="name" type="text" placeholder="email"
+                                className="input border-none " required />
+                            <hr className="border" />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Photo</span>
+                            </label>
+
+                            <input name="photo" type="text" placeholder="https://"
                                 className="input border-none " required />
                             <hr className="border" />
                         </div>

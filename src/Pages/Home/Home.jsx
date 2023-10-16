@@ -1,4 +1,5 @@
 import Banner from "../../Components/Banner";
+import Model from "../../Components/Model";
 import Shirt from "../../Components/Shirt";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Shirt></Shirt>
+            <Model></Model>
         </div>
     );
 };

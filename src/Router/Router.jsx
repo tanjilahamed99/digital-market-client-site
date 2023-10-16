@@ -3,7 +3,9 @@ import Root from "../Root/Root";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Registration/Registration";
-import Shirt from "../Pages/Shirt/Shirt";
+import Shirt from "../Pages/Shirt/AddShirt";
+import Detail from "../Components/Detail";
+import Update from "../Components/update";
 
 const Router = createBrowserRouter([
     {
@@ -25,6 +27,16 @@ const Router = createBrowserRouter([
             {
                 path: '/shirt',
                 element: <Shirt></Shirt>
+            },
+            {
+                path: '/update/:id',
+                element: <Update></Update>,
+                loader: ({ params }) => fetch(`http://localhost:5000/shirt/${params.id}`)
+            },
+            {
+                path: '/detail/:id',
+                element: <Detail></Detail>,
+                loader: ({ params }) => fetch(`http://localhost:5000/shirt/${params.id}`)
             },
         ]
     }
