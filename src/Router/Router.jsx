@@ -31,12 +31,12 @@ const Router = createBrowserRouter([
             {
                 path: '/update/:id',
                 element: <Update></Update>,
-                loader: ({ params }) => fetch(`http://localhost:5000/shirt/${params.id}`)
+                loader: ({ params }) => fetch(`https://digital-market-server-site-na1m0sgzl-tanjil-ahameds-projects.vercel.app/shirt/${params.id}`)
             },
             {
                 path: '/detail/:id',
                 element: <Detail></Detail>,
-                loader: ({ params }) => fetch(`http://localhost:5000/shirt/${params.id}`)
+                loader: ({ params }) => fetch(`https://digital-market-server-site-na1m0sgzl-tanjil-ahameds-projects.vercel.app/shirt/${params.id}`)
             },
         ]
     }

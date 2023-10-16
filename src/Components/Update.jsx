@@ -20,7 +20,7 @@ const Update = () => {
         // 
 
 
-        fetch(`http://localhost:5000/shirt/${_id}`, {
+        fetch(`https://digital-market-server-site-na1m0sgzl-tanjil-ahameds-projects.vercel.app/shirt/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

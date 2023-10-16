@@ -20,7 +20,7 @@ const DisplayShirt = ({ shirt, setShirts, shirts }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/shirt/${_id}`, {
+                fetch(`https://digital-market-server-site-na1m0sgzl-tanjil-ahameds-projects.vercel.app/shirt/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

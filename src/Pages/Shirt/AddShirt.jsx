@@ -16,7 +16,7 @@ const Shirt = () => {
         form.reset()
 
 
-        fetch('http://localhost:5000/shirt', {
+        fetch('https://digital-market-server-site-na1m0sgzl-tanjil-ahameds-projects.vercel.app/shirt', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

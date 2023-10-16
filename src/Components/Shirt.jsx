@@ -7,7 +7,7 @@ const Shirt = () => {
     const [shirts, setShirts] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/shirt')
+        fetch('https://digital-market-server-site-na1m0sgzl-tanjil-ahameds-projects.vercel.app/shirt')
             .then(res => res.json())
             .then(data => setShirts(data))
     }, [])

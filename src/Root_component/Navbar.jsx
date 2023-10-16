@@ -89,9 +89,11 @@ const Navbar = () => {
                 <a className="btn btn-ghost normal-case text-xl text-white">My-Shop</a>
             </div>
             <div className="navbar-end flex gap-2 items-center">
-                <img className="w-10 rounded-full h-10 " src={user.photoURL} alt="" />
                 {
-                    user ? <button className="btn btn-outline text-white" onClick={handleLogout}>log out</button> : <Link to={'/login'}><h2>login</h2></Link>
+                    user && <img className="w-10 rounded-full h-10 " src={user.photoURL} alt="" />
+                }
+                {
+                    user ? <button className="btn btn-outline text-white" onClick={handleLogout}>log out</button> : <Link to={'/login'}><h2 className="btn text-white btn-outline">login</h2></Link>
                 }
             </div>
         </div >
