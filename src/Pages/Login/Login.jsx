@@ -1,31 +1,73 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import Swal from "sweetalert2";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Login = () => {
 
     const [see, setSee] = useState(false)
 
+    const { userLogin } = useContext(AuthContext)
+    const navigate = useNavigate()
+
+
+    const handleLoginUser = e => {
+        e.preventDefault()
+        const form = e.target;
+        const email = form.email.value
+        const password = form.password.value
+
+        const newUser = { email, password }
+        console.log(newUser)
+
+        userLogin(email, password)
+            .then(res => {
+                console.log(res.user)
+                Swal.fire(
+                    'Good job!',
+                    'Successful login account',
+                    'success'
+                )
+               navigate('/')
+            })
+            .catch(error => {
+                Swal.fire({
+                    title: 'Error!',
+                    text: `${error.message}`,
+                    icon: 'error',
+                    confirmButtonText: 'Cool'
+                })
+            })
+
+    }
+
+
+
     return (
-        <div className="hero  py-10">
+        <div className="hero py-10 bg-[url(https://i.ibb.co/Kybz9h0/Stock-Snap-TEJEVWYFCK.jpg)] bg-cover bg-no-repeat h-[600px]">
             <div className="w-[40%]">
                 <div className="text-center">
-                    <h1 className="text-5xl font-bold">Login now!</h1>
-                    <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <h1 className="text-5xl font-bold text-white mb-5">Login now!</h1>
                 </div>
                 <div className="card   flex-shrink-0 w-[80%] mx-auto shadow-2xl bg-base-100">
-                    <form className="card-body">
+                    <form onSubmit={handleLoginUser} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" placeholder="email" className="input input-bordered" required />
+
+                            <input name="email" type="email" placeholder="email"
+                                className="input border-none " required />
+                            <hr className="border" />
                         </div>
                         <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type={see ? 'text' : "password"} placeholder="password" className="input input-bordered" required />
+                            <input name="password" type={see ? 'text' : "password"} placeholder="password"
+                                className="input border-none " required />
+                            <hr className="border" />
 
                             {
                                 see ? <FaEye onClick={() => setSee(!see)} className="absolute right-3 bottom-12"></FaEye> :
