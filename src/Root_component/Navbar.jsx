@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -14,7 +14,7 @@ const Navbar = () => {
 
         <li>
             <NavLink
-                to="/"
+                to="/registration"
                 className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active" : ""
                 }
@@ -65,7 +65,7 @@ const Navbar = () => {
                 <a className="btn btn-ghost normal-case text-xl">My-Shop</a>
             </div>
             <div className="navbar-end">
-                <h2>login</h2>
+                <Link to={'/login'}><h2>login</h2></Link>
             </div>
         </div>
     );
