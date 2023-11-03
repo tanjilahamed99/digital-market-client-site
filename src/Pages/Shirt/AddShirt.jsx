@@ -2,7 +2,7 @@ import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const Shirt = () => {
+const AddShirt = () => {
 
     const handleCreateShirt = e => {
         e.preventDefault()
@@ -16,7 +16,7 @@ const Shirt = () => {
         form.reset()
 
 
-        fetch('https://digital-market-server-site-na1m0sgzl-tanjil-ahameds-projects.vercel.app/shirt', {
+        fetch('http://localhost:5000/shirt', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -75,4 +75,4 @@ const Shirt = () => {
     );
 };
 
-export default Shirt;
+export default AddShirt;

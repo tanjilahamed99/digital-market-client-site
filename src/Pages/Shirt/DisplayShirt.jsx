@@ -1,44 +1,10 @@
 import PropTypes from 'prop-types';
-import { AiTwotoneDelete } from "react-icons/ai";
 import { FaEye, FaPen } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import Swal from 'sweetalert2';
 
-const DisplayShirt = ({ shirt, setShirts, shirts }) => {
+const DisplayShirt = ({ shirt }) => {
 
     const { _id, name, price, quality, brand, photo } = shirt;
-
-    const handleDelete = _id => {
-
-        Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                fetch(`https://digital-market-server-site-na1m0sgzl-tanjil-ahameds-projects.vercel.app/shirt/${_id}`, {
-                    method: "DELETE"
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        if (data.deletedCount > 0) {
-                            Swal.fire(
-                                'Good job!',
-                                'shirt delete dane',
-                                'delete'
-                            )
-                            const reaming = shirts.filter(item => item._id !== _id)
-                            setShirts(reaming)
-                        }
-                    })
-            }
-        })
-    }
-
     return (
         <div className="card  bg-base-100 shadow-xl p-5 mx-auto">
             <img className='h-[300px] w-[300px]' src={photo} alt="Shoes" />
@@ -60,9 +26,6 @@ const DisplayShirt = ({ shirt, setShirts, shirts }) => {
                             <FaPen></FaPen>
                         </div>
                     </Link>
-                    <div onClick={() => handleDelete(_id)} className='p-2 bg-orange-500 text-white rounded-lg'>
-                        <AiTwotoneDelete></AiTwotoneDelete>
-                    </div>
                 </div>
             </div>
         </div>

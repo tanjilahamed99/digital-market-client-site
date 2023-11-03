@@ -3,9 +3,11 @@ import Root from "../Root/Root";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Registration/Registration";
-import Shirt from "../Pages/Shirt/AddShirt";
+import AddShirt from "../Pages/Shirt/AddShirt";
 import Detail from "../Components/Detail";
 import Update from "../Components/update";
+import PrivateRoute from "./PrivateRoute";
+import CustomerProducts from "../Pages/CustomerProducts/CustomerProducts";
 
 const Router = createBrowserRouter([
     {
@@ -26,17 +28,21 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/shirt',
-                element: <Shirt></Shirt>
+                element: <AddShirt></AddShirt>
             },
             {
                 path: '/update/:id',
-                element: <Update></Update>,
-                loader: ({ params }) => fetch(`https://digital-market-server-site-na1m0sgzl-tanjil-ahameds-projects.vercel.app/shirt/${params.id}`)
+                element: <PrivateRoute> <Update></Update></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/shirt/${params.id}`)
             },
             {
                 path: '/detail/:id',
-                element: <Detail></Detail>,
-                loader: ({ params }) => fetch(`https://digital-market-server-site-na1m0sgzl-tanjil-ahameds-projects.vercel.app/shirt/${params.id}`)
+                element: <PrivateRoute><Detail></Detail></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/shirt/${params.id}`)
+            },
+            {
+                path: '/customerProducts',
+                element: <PrivateRoute><CustomerProducts></CustomerProducts></PrivateRoute>
             },
         ]
     }
