@@ -3,6 +3,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import axios from "axios";
 
 const Login = () => {
 
@@ -17,9 +18,7 @@ const Login = () => {
         const form = e.target;
         const email = form.email.value
         const password = form.password.value
-
-        const newUser = { email, password }
-        console.log(newUser)
+        const tokenEmail = { email }
 
         userLogin(email, password)
             .then(res => {
@@ -29,7 +28,10 @@ const Login = () => {
                     'Successful login account',
                     'success'
                 )
-               navigate('/')
+
+                axios.post('http://localhost:5000/login', tokenEmail, { withCredentials: true })
+                    .then(res => console.log(res.data))
+                navigate('/')
             })
             .catch(error => {
                 Swal.fire({

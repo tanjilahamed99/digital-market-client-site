@@ -10,7 +10,7 @@ const CustomerProducts = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/myproducts/?email=${user.email}`)
+        axios.get(`http://localhost:5000/myproducts/?email=${user.email}`, { withCredentials: true })
             .then(res => setProducts(res.data))
     }, [user])
 

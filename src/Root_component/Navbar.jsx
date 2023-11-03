@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 const Navbar = () => {
 
@@ -10,19 +11,15 @@ const Navbar = () => {
     const handleLogout = () => {
         userLogout()
             .then(() => {
+                axios.post('http://localhost:5000/logout', { email: user.email }, { withCredentials: true })
+                    .then(res => console.log(res.data))
                 Swal.fire(
                     'Good job!',
                     'Successful log out account',
                     'success'
                 )
             })
-            .then(error => {
-                Swal.fire({
-                    title: 'Error!',
-                    text: `${error.message}`,
-                    icon: 'error',
-                    confirmButtonText: 'Cool'
-                })
+            .then(() => {
             })
     }
 
