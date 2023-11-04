@@ -8,6 +8,8 @@ import Detail from "../Components/Detail";
 import Update from "../Components/update";
 import PrivateRoute from "./PrivateRoute";
 import CustomerProducts from "../Pages/CustomerProducts/CustomerProducts";
+import GamingProducts from "../Pages/Gaming Products/GamingProducts";
+import Clothes from "../Pages/Cloths/Clothes";
 
 const Router = createBrowserRouter([
     {
@@ -43,6 +45,14 @@ const Router = createBrowserRouter([
             {
                 path: '/customerProducts',
                 element: <PrivateRoute><CustomerProducts></CustomerProducts></PrivateRoute>
+            },
+            {
+                path: '/gamingProducts',
+                element: <GamingProducts></GamingProducts>
+            },
+            {
+                path: '/cloth',
+                element: <Clothes></Clothes>
             },
         ]
     }
