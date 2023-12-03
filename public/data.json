@@ -1,0 +1,94 @@
+
+[
+    {
+      "productName": "Casual Denim Jeans",
+      "price": 49.99,
+      "details": "Comfortable and stylish denim jeans for casual wear.",
+      "brand": "UrbanDenim",
+      "rating": 4.5,
+      "imageUrl": "https://i.ibb.co/QmkzKQb/1.png",
+      "publishDate": "2023-12-01"
+    },
+    {
+      "productName": "Running Shoes",
+      "price": 79.99,
+      "details": "Performance running shoes for active individuals.",
+      "brand": "SwiftRun",
+      "rating": 4.8,
+      "imageUrl": "https://i.ibb.co/sqxGNnY/pngwing-com-11.png",
+      "publishDate": "2023-11-28"
+    },
+    {
+      "productName": "Formal Blazer",
+      "price": 129.99,
+      "details": "Elegant formal blazer for professional occasions.",
+      "brand": "EleganceAttire",
+      "rating": 4.2,
+      "imageUrl": "https://i.ibb.co/7XkVWNH/pngwing-com-12.png",
+      "publishDate": "2023-11-25"
+    },
+    {
+      "productName": "Athletic Joggers",
+      "price": 39.99,
+      "details": "Versatile joggers designed for sports and leisure.",
+      "brand": "ActiveGear",
+      "rating": 4.0,
+      "imageUrl": "https://i.ibb.co/Wc1qpzV/pngwing-com-13.png",
+      "publishDate": "2023-12-02"
+    },
+    {
+      "productName": "Leather Ankle Boots",
+      "price": 89.99,
+      "details": "Stylish leather ankle boots for a fashionable look.",
+      "brand": "ChicSteps",
+      "rating": 4.6,
+      "imageUrl": "https://i.ibb.co/gm67TKP/pngwing-com-14.png",
+      "publishDate": "2023-11-30"
+    },
+    {
+      "productName": "Classic Trench Coat",
+      "price": 149.99,
+      "details": "Timeless trench coat for a sophisticated appearance.",
+      "brand": "TimelessStyle",
+      "rating": 4.7,
+      "imageUrl": "https://i.ibb.co/LNh5tPX/pngwing-com-15.png",
+      "publishDate": "2023-12-03"
+    },
+    {
+      "productName": "Canvas Sneakers",
+      "price": 29.99,
+      "details": "Casual canvas sneakers for everyday comfort.",
+      "brand": "CasualKicks",
+      "rating": 4.3,
+      "imageUrl": "https://i.ibb.co/BTQhFN2/pngwing-com-16.png",
+      "publishDate": "2023-11-29"
+    },
+    {
+      "productName": "Slim Fit Chinos",
+      "price": 59.99,
+      "details": "Modern slim fit chinos for a polished look.",
+      "brand": "ModernFit",
+      "rating": 4.9,
+      "imageUrl": "https://i.ibb.co/c8PFdgZ/pngwing-com-17.png",
+      "publishDate": "2023-11-27"
+    },
+    {
+      "productName": "Casual Sneakers",
+      "price": 49.99,
+      "details": "Comfortable and trendy casual sneakers for any occasion.",
+      "brand": "UrbanStyle",
+      "rating": 4.4,
+      "imageUrl": "https://i.ibb.co/qWSjvT3/pngwing-com-18.png",
+      "publishDate": "2023-11-26"
+    },
+    {
+      "productName": "Fashionable Loafers",
+      "price": 69.99,
+      "details": "Chic loafers for a stylish and comfortable look.",
+      "brand": "ChicFootwear",
+      "rating": 4.1,
+      "imageUrl": "https://i.ibb.co/WHF2hHn/pngwing-com-19.png",
+      "publishDate": "2023-12-05"
+    }
+  ]
+  

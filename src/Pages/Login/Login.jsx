@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import axios from "axios";
+import bgImage from '../../assets/sean-oulashin-KMn4VEeEPR8-unsplash.jpg'
 
 const Login = () => {
 
@@ -45,18 +46,28 @@ const Login = () => {
     }
 
 
+    // const handleResetUserPassword = e => {
+    //     e.preventDefault()
+    //     const form = e.target
+    //     const email = form.email.value
+    //     console.log(email)
+    // }
+
 
     return (
-        <div className="hero py-10 bg-[url(https://i.ibb.co/Kybz9h0/Stock-Snap-TEJEVWYFCK.jpg)] bg-cover bg-no-repeat h-[600px]">
-            <div className="w-[40%]">
+        <div className='hero  bg-cover bg-no-repeat h-[100vh]' style={{ backgroundImage: `url(${bgImage})` }} >
+
+            <div className="hero-overlay bg-opacity-30"></div>
+
+            <div className="w-[50%] shadow-2xl p-5 bg-white bg-opacity-10 rounded-xl">
                 <div className="text-center">
                     <h1 className="text-5xl font-bold text-white mb-5">Login now!</h1>
                 </div>
-                <div className="card   flex-shrink-0 w-[80%] mx-auto shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 w-[80%] mx-auto ">
                     <form onSubmit={handleLoginUser} className="card-body">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text text-white">Email</span>
                             </label>
 
                             <input name="email" type="email" placeholder="email"
@@ -65,7 +76,7 @@ const Login = () => {
                         </div>
                         <div className="form-control relative">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="label-text text-white" >Password</span>
                             </label>
                             <input name="password" type={see ? 'text' : "password"} placeholder="password"
                                 className="input border-none " required />
@@ -79,13 +90,13 @@ const Login = () => {
 
 
                             <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                <a href="#" className="label-text-alt link text-white link-hover">Forgot password?</a>
                             </label>
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
                         </div>
-                        <p>New here <Link className="font-semibold text-purple-700" to={'/registration'}>Create account</Link></p>
+                        <p className="text-white">New here <Link className="font-semibold text-black" to={'/registration'}>Create account</Link></p>
                     </form>
                 </div>
             </div>

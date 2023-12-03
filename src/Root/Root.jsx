@@ -4,7 +4,7 @@ import Footer from "../Root_component/Footer";
 
 const Root = () => {
     return (
-        <div className="">
+        <div className="container mx-auto">
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>

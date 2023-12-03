@@ -5,6 +5,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { updateProfile } from "firebase/auth";
 import auth from "../../firebase/firebase-config";
+import bgImage from '../../assets/sean-oulashin-KMn4VEeEPR8-unsplash.jpg'
 
 
 
@@ -59,16 +60,17 @@ const Registration = () => {
     const [see, setSee] = useState(false)
 
     return (
-        <div className="hero py-10  bg-[url(https://i.ibb.co/Kybz9h0/Stock-Snap-TEJEVWYFCK.jpg)] bg-cover bg-no-repeat ">
-            <div className="w-[40%] ">
+        <div className="hero bg-cover bg-no-repeat h-[100vh]" style={{ backgroundImage: `url(${bgImage})` }}>
+            <div className="hero-overlay bg-opacity-30"></div>
+            <div className="w-[50%] shadow-2xl bg-white bg-opacity-10 p-5 rounded-xl">
                 <div className="text-center">
-                    <h1 className="text-5xl font-bold text-white mb-5">Create Account</h1>
+                    <h1 className="text-5xl font-bold text-white ">Create Account</h1>
                 </div>
-                <div className="card flex-shrink-0 w-[80%] mx-auto shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 w-[80%] mx-auto">
                     <form onSubmit={handleCreateUser} className="card-body">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Name</span>
+                                <span className="label-text text-white">Name</span>
                             </label>
 
                             <input name="name" type="text" placeholder="email"
@@ -77,7 +79,7 @@ const Registration = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Photo</span>
+                                <span className="label-text text-white">Photo</span>
                             </label>
 
                             <input name="photo" type="text" placeholder="https://"
@@ -86,7 +88,7 @@ const Registration = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text text-white">Email</span>
                             </label>
 
                             <input name="email" type="email" placeholder="email"
@@ -95,7 +97,7 @@ const Registration = () => {
                         </div>
                         <div className="form-control relative">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="label-text text-white">Password</span>
                             </label>
                             <input name="password" type={see ? 'text' : "password"} placeholder="password"
                                 className="input border-none " required />
@@ -106,10 +108,10 @@ const Registration = () => {
                                     <FaEyeSlash onClick={() => setSee(!see)} className="absolute right-3 bottom-5"></FaEyeSlash>
                             }
                         </div>
-                        <div className="form-control mt-6">
+                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Create</button>
-                        </div>
-                        <p>Already have account <Link className="font-semibold text-purple-700" to={'/login'}>Login</Link></p>
+                         </div>
+                        <p className="text-white">Already have account <Link className="font-semibold text-black" to={'/login'}>Login</Link></p>
                     </form>
                 </div>
             </div>
