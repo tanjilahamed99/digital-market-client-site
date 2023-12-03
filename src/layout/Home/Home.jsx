@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import KeenSlider from "../../Components/keenSlider";
 import Featured from "../../Pages/Home/FetauredProducts/Featured";
+import PopularProducts from "../../Pages/Home/PopualarProducts/PopularProducts";
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             </Helmet>
             <KeenSlider></KeenSlider>
             <Featured></Featured>
+            <PopularProducts></PopularProducts>
         </div>
     );
 };
