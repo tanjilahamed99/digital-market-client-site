@@ -4,3 +4,4 @@
 - react marquee
 - aos animation
 - react rating
+- react hook form
