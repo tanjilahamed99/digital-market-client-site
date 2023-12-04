@@ -11,7 +11,7 @@ const PopularProducts = () => {
             <SectionTittle subTittle={'Popular'} tittle={'Popular Products'}></SectionTittle>
             <Marquee >
                 {
-                    feature?.map(item => <img className="w-[200px] h-[200px] mx-10" key={item._id} src={item?.imageUrl}></img>)
+                    feature?.map(item => <div className="mx-10 shadow-xl " key={item._id}><img className="w-[200px] h-[200px]  p-5" src={item?.imageUrl}></img> <h2 className="text-center font-bold text-sm">{item?.productName}</h2></div>)
                 }
             </Marquee>
         </div>

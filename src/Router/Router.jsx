@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 // import GamingProducts from "../Pages/Gaming Products/GamingProducts";
 // import Clothes from "../Pages/Cloths/Clothes";
 import Home from "../layout/Home/Home";
+import Products from "../Pages/Products/Products";
 
 const Router = createBrowserRouter([
     {
@@ -20,23 +21,10 @@ const Router = createBrowserRouter([
                 path: '/',
                 element: <Home></Home>
             },
-            // {
-            //     path: '/login',
-            //     element: <Login></Login>
-            // },
-            // {
-            //     path: '/registration',
-            //     element: <Registration></Registration>
-            // },
-            // {
-            //     path: '/shirt',
-            //     element: <AddShirt></AddShirt>
-            // },
-            // {
-            //     path: '/update/:id',
-            //     element: <PrivateRoute> <Update></Update></PrivateRoute>,
-            //     loader: ({ params }) => fetch(`http://localhost:5000/shirt/${params.id}`)
-            // },
+            {
+                path: '/products',
+                element: <Products></Products>
+            },
             {
                 path: '/detail/:id',
                 element: <PrivateRoute><Detail></Detail></PrivateRoute>,

@@ -32,6 +32,17 @@ const Navbar = () => {
         <li>
 
             <NavLink
+                to="/products"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "text-red-500" : ""
+                }
+            >
+                Products
+            </NavLink>
+        </li>
+        <li>
+
+            <NavLink
                 to="/"
                 className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "text-red-500" : ""
@@ -89,7 +100,7 @@ const Navbar = () => {
                 </div>
                 <div className="dropdown dropdown-end">
                     {
-                        user  && <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                        user && <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
                                 <img src={user?.photoURL} />
                             </div>
