@@ -2,15 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "../Root/Root";
 import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Registration/Registration";
-// import AddShirt from "../Pages/Shirt/AddShirt";
 import Detail from "../Components/Detail";
-// import Update from "../Components/update";
 import PrivateRoute from "./PrivateRoute";
-// import CustomerProducts from "../Pages/CustomerProducts/CustomerProducts";
-// import GamingProducts from "../Pages/Gaming Products/GamingProducts";
-// import Clothes from "../Pages/Cloths/Clothes";
 import Home from "../layout/Home/Home";
 import Products from "../Pages/Products/Products";
+import BrandsProducts from "../Pages/Brands/BrandsProducts";
 
 const Router = createBrowserRouter([
     {
@@ -42,15 +38,19 @@ const Router = createBrowserRouter([
             //     path: '/cloth',
             //     element: <Clothes></Clothes>
             // },
+            {
+                path: '/brands/:name',
+                element: <BrandsProducts></BrandsProducts>
+            },
         ]
     },
     {
-        path:'/login',
-        element:<Login></Login>
+        path: '/login',
+        element: <Login></Login>
     },
     {
-        path:'/registration',
-        element:<Registration></Registration>
+        path: '/registration',
+        element: <Registration></Registration>
     },
 ])
 

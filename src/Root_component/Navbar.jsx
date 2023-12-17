@@ -16,19 +16,6 @@ const Navbar = () => {
         >
             Home
         </NavLink></li>
-
-        {
-            !user && <li>
-                <NavLink
-                    to="/login"
-                    className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "text-red-500" : ""
-                    }
-                >
-                    login
-                </NavLink>
-            </li>
-        }
         <li>
 
             <NavLink
@@ -51,6 +38,18 @@ const Navbar = () => {
                 About
             </NavLink>
         </li>
+        {
+            !user && <li>
+                <NavLink
+                    to="/login"
+                    className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "text-red-500" : ""
+                    }
+                >
+                    login
+                </NavLink>
+            </li>
+        }
     </>
 
     const handleLogout = () => {

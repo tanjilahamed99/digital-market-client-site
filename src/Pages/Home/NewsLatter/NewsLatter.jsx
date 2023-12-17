@@ -1,12 +1,13 @@
 import { FaArrowRight } from "react-icons/fa";
 import UseAxiosPublic from "../../../Hooks/AxiosPublic/UseAxiosPublic";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 const NewsLatter = () => {
 
     const axiosPublic = UseAxiosPublic()
 
-    const { register, handleSubmit } = useForm()
+    const { register, handleSubmit, reset } = useForm()
 
     const onSubmit = (data) => {
         const email = data.email
@@ -14,7 +15,15 @@ const NewsLatter = () => {
 
         axiosPublic.post('/newsLatter', { email })
             .then(res => {
-                console.log(res.data)
+                if (res.data) {
+                    Swal.fire({
+                        icon: "success",
+                        title: "Your Email Address has been saved",
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                    reset()
+                }
             })
 
     }

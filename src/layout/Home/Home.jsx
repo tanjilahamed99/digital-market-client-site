@@ -5,6 +5,7 @@ import PopularProducts from "../../Pages/Home/PopualarProducts/PopularProducts";
 import Products from "../../Pages/Home/Products/Products";
 import Trust from "../../Pages/Home/Trust/Trust";
 import NewsLatter from "../../Pages/Home/NewsLatter/NewsLatter";
+import Brands from "../../Pages/Home/Brands/Brands";
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
                 <title>Home || StyleByte</title>
             </Helmet>
             <KeenSlider></KeenSlider>
+            <Brands></Brands>
             <Featured></Featured>
             <Trust></Trust>
             <PopularProducts></PopularProducts>
