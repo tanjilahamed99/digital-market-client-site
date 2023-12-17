@@ -15,7 +15,8 @@ const NewsLatter = () => {
 
         axiosPublic.post('/newsLatter', { email })
             .then(res => {
-                if (res.data) {
+                if (res.data && !res.data.exist) {
+                    console.log(res.data)
                     Swal.fire({
                         icon: "success",
                         title: "Your Email Address has been saved",
@@ -23,6 +24,13 @@ const NewsLatter = () => {
                         timer: 1500
                     })
                     reset()
+                } else {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Already Exist',
+                        icon: 'error',
+                        confirmButtonText: 'Cool'
+                    })
                 }
             })
 
