@@ -14,8 +14,6 @@ const BrandsProducts = () => {
         setBrand(brandName)
     }, [axiosPublic, name, feature])
 
-    console.log(name, brand)
-
     return (
         <div className="my-20">
             <h2 className="text-center text-3xl font-semibold my-5">{name}</h2>
