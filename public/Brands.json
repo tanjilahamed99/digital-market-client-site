@@ -1,26 +1,170 @@
+
+
+
+
+
+
 [
     {
-        "name": "Adidas",
-        "img": "https://i.ibb.co/9hmWysy/download-1.png"
+        "productName": "Adidas Running Shoes",
+        "price": 79.99,
+        "details": "High-performance running shoes for athletes.",
+        "brand": "Adidas",
+        "rating": 4.2,
+        "imageUrl": "https://i.ibb.co/xjMFDJK/download-1.jpg",
+        "publishDate": "2023-12-01"
     },
     {
-        "name": "Prada",
-        "img": "https://i.ibb.co/6Xhns5T/download-2.png"
+        "productName": "Prada Leather Handbag",
+        "price": 399.99,
+        "details": "Luxurious leather handbag with intricate design.",
+        "brand": "Prada",
+        "rating": 4.8,
+        "imageUrl": "https://i.ibb.co/tpqXbMY/download-2.jpg",
+        "publishDate": "2023-12-02"
     },
     {
-        "name": "Louis Vuitton",
-        "img": "https://i.ibb.co/yXDBNnZ/download-3.png"
+        "productName": "Louis Vuitton Sunglasses",
+        "price": 199.99,
+        "details": "Stylish sunglasses with UV protection.",
+        "brand": "Louis Vuitton",
+        "rating": 4.5,
+        "imageUrl": "https://i.ibb.co/ncRnK0H/download-4.jpg",
+        "publishDate": "2023-12-03"
     },
     {
-        "name": "Calvin Klein",
-        "img": "https://i.ibb.co/vw8mrPD/download-4.png"
+        "productName": "Calvin Klein Denim Jacket",
+        "price": 129.99,
+        "details": "Classic denim jacket with Calvin Klein branding.",
+        "brand": "Calvin Klein",
+        "rating": 4.0,
+        "imageUrl": "https://i.ibb.co/Xz6jCZQ/download-5.jpg",
+        "publishDate": "2023-12-04"
     },
     {
-        "name": "ZARA",
-        "img": "https://i.ibb.co/sy8bdD8/download.jpg"
+        "productName": "ZARA Floral Dress",
+        "price": 59.99,
+        "details": "Elegant floral dress for a trendy look.",
+        "brand": "ZARA",
+        "rating": 4.3,
+        "imageUrl": "https://i.ibb.co/Q60FXyb/download-6.jpg",
+        "publishDate": "2023-12-05"
     },
     {
-        "name": "Gucci",
-        "img": "https://i.ibb.co/Lhs8gY4/download.jpg"
+        "productName": "Gucci Leather Wallet",
+        "price": 159.99,
+        "details": "Sophisticated leather wallet with Gucci logo.",
+        "brand": "Gucci",
+        "rating": 4.7,
+        "imageUrl": "https://i.ibb.co/qn8BxDb/download-7.jpg",
+        "publishDate": "2023-12-06"
+    },
+    {
+        "productName": "Adidas Track Jacket",
+        "price": 89.99,
+        "details": "Sporty track jacket with the iconic Adidas stripes.",
+        "brand": "Adidas",
+        "rating": 4.4,
+        "imageUrl": "https://i.ibb.co/8DMbHdg/download-8.jpg",
+        "publishDate": "2023-12-07"
+    },
+    {
+        "productName": "Prada Velvet Pumps",
+        "price": 299.99,
+        "details": "Luxurious velvet pumps for a glamorous night out.",
+        "brand": "Prada",
+        "rating": 4.6,
+        "imageUrl": "https://i.ibb.co/JtJp5Gh/download-9.jpg",
+        "publishDate": "2023-12-08"
+    },
+    {
+        "productName": "Louis Vuitton Backpack",
+        "price": 249.99,
+        "details": "Stylish and spacious backpack for daily use.",
+        "brand": "Louis Vuitton",
+        "rating": 4.3,
+        "imageUrl": "https://i.ibb.co/pvDsKNB/download.jpg",
+        "publishDate": "2023-12-09"
+    },
+    {
+        "productName": "Calvin Klein Watch",
+        "price": 179.99,
+        "details": "Elegant wristwatch with a minimalist design.",
+        "brand": "Calvin Klein",
+        "rating": 4.1,
+        "imageUrl": "https://i.ibb.co/dm4wcg3/images-1.jpg",
+        "publishDate": "2023-12-10"
+    },
+    {
+        "productName": "ZARA Leather Boots",
+        "price": 69.99,
+        "details": "Fashionable leather boots for a chic look.",
+        "brand": "ZARA",
+        "rating": 4.5,
+        "imageUrl": "https://i.ibb.co/d4xb471/images-2.jpg",
+        "publishDate": "2023-12-11"
+    },
+    {
+        "productName": "Gucci Silk Scarf",
+        "price": 129.99,
+        "details": "Luxurious silk scarf with the iconic Gucci pattern.",
+        "brand": "Gucci",
+        "rating": 4.9,
+        "imageUrl": "https://i.ibb.co/dm1z4NW/images-3.jpg",
+        "publishDate": "2023-12-12"
+    },
+    {
+        "productName": "Adidas Basketball Shorts",
+        "price": 34.99,
+        "details": "Comfortable basketball shorts for active wear.",
+        "brand": "Adidas",
+        "rating": 4.0,
+        "imageUrl": "https://i.ibb.co/Hzt2zWk/images-4.jpg",
+        "publishDate": "2023-12-13"
+    },
+    {
+        "productName": "Prada Nylon Crossbody Bag",
+        "price": 259.99,
+        "details": "Stylish and practical crossbody bag in durable nylon.",
+        "brand": "Prada",
+        "rating": 4.7,
+        "imageUrl": "https://i.ibb.co/FJdkm3Z/images-5.jpg",
+        "publishDate": "2023-12-14"
+    },
+    {
+        "productName": "Louis Vuitton Leather Gloves",
+        "price": 149.99,
+        "details": "Luxurious leather gloves for a touch of elegance.",
+        "brand": "Louis Vuitton",
+        "rating": 4.6,
+        "imageUrl": "https://i.ibb.co/17b6346/images.jpg",
+        "publishDate": "2023-12-15"
+    },
+    {
+        "productName": "Calvin Klein Perfume",
+        "price": 79.99,
+        "details": "Captivating fragrance in a sleek Calvin Klein bottle.",
+        "brand": "Calvin Klein",
+        "rating": 4.3,
+        "imageUrl": "https://i.ibb.co/2qpqcYW/images-6.jpg",
+        "publishDate": "2023-12-16"
+    },
+    {
+        "productName": "ZARA Knit Sweater",
+        "price": 49.99,
+        "details": "Cozy knit sweater for a warm and stylish winter.",
+        "brand": "ZARA",
+        "rating": 4.5,
+        "imageUrl": "https://i.ibb.co/SRPVDmt/images-7.jpg",
+        "publishDate": "2023-12-17"
+    },
+    {
+        "productName": "Gucci Velvet Loafers",
+        "price": 189.99,
+        "details": "Opulent velvet loafers for a luxurious touch.",
+        "brand": "Gucci",
+        "rating": 4.8,
+        "imageUrl": "https://i.ibb.co/17b6346/images.jpg",
+        "publishDate": "2023-12-18"
     }
 ]
