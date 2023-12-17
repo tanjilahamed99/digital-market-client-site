@@ -18,6 +18,7 @@ const BrandsProducts = () => {
 
     return (
         <div className="my-20">
+            <h2 className="text-center text-3xl font-semibold my-5">{name}</h2>
             <div className="grid grid-cols-1 gap-10 items-center md:grid-cols-2 lg:grid-cols-3">
                 {
                     brand?.map(i => <DisplayProducts key={i._id} products={i}></DisplayProducts>)

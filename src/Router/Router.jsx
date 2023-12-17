@@ -2,11 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "../Root/Root";
 import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Registration/Registration";
-import Detail from "../Components/Detail";
 import PrivateRoute from "./PrivateRoute";
 import Home from "../layout/Home/Home";
 import Products from "../Pages/Products/Products";
 import BrandsProducts from "../Pages/Brands/BrandsProducts";
+import DisplayProductsDetails from "../Pages/DisplayProductsDetails/DisplayProductsDetails";
 
 const Router = createBrowserRouter([
     {
@@ -22,9 +22,8 @@ const Router = createBrowserRouter([
                 element: <Products></Products>
             },
             {
-                path: '/detail/:id',
-                element: <PrivateRoute><Detail></Detail></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/shirt/${params.id}`)
+                path: '/brandDetail/:id',
+                element: <PrivateRoute><DisplayProductsDetails></DisplayProductsDetails></PrivateRoute>
             },
             // {
             //     path: '/customerProducts',
